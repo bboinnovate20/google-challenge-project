@@ -9,13 +9,19 @@
 </head>
 
 <body>
+    <div id="pop-up" class="pop-up opacity-change">
+        <h3>Welcome</h3>
+        <h4> Search for Location using Zip code or name</h4>
+        <div class="closebutton" onclick="closebutton()">X</div>
+        <img src="asset/polygon.png" alt="">
+    </div>
     <div class="title"> <span class="store"> <img src="asset/shopping_cart.png" alt=""> </span> <span class="store"> <span class="side-title">STORE</span> LOCATOR</span>
     </div>
     <div class="search-container">
         <div class="search">
 
-            <input type="text" placeholder="Enter Zip">
-            <span class="search-bar"><img src="asset/search.svg" alt=""></span>
+            <input id="zip-code-input" type="text" placeholder="Enter Zip or Name">
+            <span class="search-bar" onclick="searchStores()"><img src="asset/search.svg" alt=""></span>
 
         </div>
     </div>

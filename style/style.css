@@ -11,7 +11,7 @@ body {
 
 .title {
     position: absolute;
-    font-size: 70px;
+    font-size: 60px;
     z-index: 33;
     left: 100px;
     top: 100px;
@@ -78,6 +78,8 @@ body {
     width: 60px;
     height: 100%;
     padding-left: 15px;
+    cursor: pointer;
+    transition: opacity .2s ease;
     /* padding: 50px; */
 }
 
@@ -140,12 +142,14 @@ body {
     line-height: 25px;
     border-bottom: 2px solid #9c59b685;
     margin-bottom: 20px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
 }
 
 .store-container .marker-map {
     background-color: #8e44ad;
     padding: 15px 20px;
-    font-size: 20px;
+    font-size: 24px;
     height: max-content;
     border-radius: 10px 0 0 10px;
     color: white;
@@ -155,6 +159,12 @@ body {
     margin-top: 15px;
     color: rgb(153, 150, 150);
     font-size: 90%;
+}
+
+.marker-map .col-2,
+.time {
+    color: black;
+    font-size: 18px;
 }
 
 
@@ -225,4 +235,91 @@ img {
 
 .gm-style-iw-a {
     z-index: 999 !important;
+}
+
+
+/* animation */
+
+.store-container:hover {
+    background-color: #f2d5ff;
+    border-width: 5px;
+}
+
+.gm-style-iw-d {
+    transition: all .20s ease-in-out;
+    animation: script .4s ease-in-out;
+}
+
+.pop-up {
+    background-color: white;
+    width: max-content;
+    position: absolute;
+    top: 200px;
+    left: 550px;
+    z-index: 50;
+    padding: 20px;
+    border-radius: 20px;
+    opacity: 0;
+}
+
+.pop-up img {
+    left: -30;
+    bottom: 10px;
+    position: absolute;
+    transform: rotate(60deg);
+    width: 50px;
+}
+
+.opacity-change {
+    opacity: 100;
+}
+
+.pop-up h3,
+h4 {
+    margin: 0;
+}
+
+.pop-up h3 {
+    font-size: 25px;
+}
+
+.pop-up h4 {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.closebutton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 20px 0 0;
+    padding: 7px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+@keyframes script {
+    0% {
+        opacity: 0;
+        transform: translate(-20px);
+    }
+    50% {
+        opacity: 50;
+        transform: translate(-10px);
+    }
+    100% {
+        opacity: 100;
+        transform: translate(0);
+    }
+}
+
+.search .search-bar:hover {
+    opacity: 90%;
+}
+
+@media (max-width: 700px) {
+    .title {
+        font-size: 40px;
+    }
 }
